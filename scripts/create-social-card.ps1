@@ -2,6 +2,7 @@ Add-Type -AssemblyName System.Drawing
 
 $sourcePath = Join-Path $PSScriptRoot "..\static\img\brand\teamhjd-light.png"
 $outputPath = Join-Path $PSScriptRoot "..\static\img\teamhjd-social-card.png"
+$faviconPath = Join-Path $PSScriptRoot "..\static\img\brand\favicon.png"
 
 $canvas = New-Object System.Drawing.Bitmap 1200, 630
 $graphics = [System.Drawing.Graphics]::FromImage($canvas)
@@ -51,3 +52,19 @@ $halo.Dispose()
 $background.Dispose()
 $graphics.Dispose()
 $canvas.Dispose()
+
+$favicon = New-Object System.Drawing.Bitmap 256, 256
+$faviconGraphics = [System.Drawing.Graphics]::FromImage($favicon)
+$faviconGraphics.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
+$faviconGraphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
+$faviconGraphics.Clear([System.Drawing.Color]::Transparent)
+$faviconBackground = New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(16, 52, 66))
+$faviconGraphics.FillEllipse($faviconBackground, 4, 4, 248, 248)
+$faviconLogo = [System.Drawing.Image]::FromFile($sourcePath)
+$faviconGraphics.DrawImage($faviconLogo, (New-Object System.Drawing.Rectangle 27, 20, 202, 220), 195, 75, 270, 285, [System.Drawing.GraphicsUnit]::Pixel)
+$favicon.Save($faviconPath, [System.Drawing.Imaging.ImageFormat]::Png)
+
+$faviconLogo.Dispose()
+$faviconBackground.Dispose()
+$faviconGraphics.Dispose()
+$favicon.Dispose()

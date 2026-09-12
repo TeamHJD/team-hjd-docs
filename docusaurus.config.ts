@@ -8,7 +8,7 @@ const config: Config = {
   baseUrl: '/team-hjd-docs/',
   organizationName: 'TeamHJD',
   projectName: 'team-hjd-docs',
-  favicon: 'img/brand/favicon.svg',
+  favicon: 'img/brand/favicon.png',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   markdown: {
