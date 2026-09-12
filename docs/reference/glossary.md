@@ -17,3 +17,5 @@ tags: [reference, glossary]
 | Regression | 기존에 되던 기능이 변경 후 다시 깨지는 현상 |
 
 용어를 추가할 때에는 사전식 정의뿐 아니라 TeamHJD에서 어떤 상황에 쓰는지도 함께 기록합니다.
+
+Git·GitHub·Unity 협업, 소프트웨어 공학 약어까지 포함한 전체 용어 설명은 [전체 Unity 협업 가이드](../collaboration/unity-team-collaboration-guide)에서 확인합니다.

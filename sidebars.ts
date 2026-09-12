@@ -7,7 +7,12 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '01. 협업의 흐름',
       collapsed: false,
-      items: ['collaboration/overview', 'collaboration/git-basics', 'collaboration/github-flow'],
+      items: [
+        'collaboration/overview',
+        'collaboration/git-basics',
+        'collaboration/github-flow',
+        'collaboration/unity-team-collaboration-guide',
+      ],
     },
     {
       type: 'category',
@@ -19,7 +24,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: '03. 팀의 지식',
       collapsed: true,
-      items: ['team/working-agreements', 'team/onboarding'],
+      items: ['team/working-agreements', 'team/onboarding', 'team/document-contribution'],
     },
     {
       type: 'category',

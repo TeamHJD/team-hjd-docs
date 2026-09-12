@@ -1,5 +1,18 @@
+---
+sidebar_position: 4
+sidebar_label: 전체 협업 가이드
+title: Unity 팀 개발 협업 가이드
+description: Git, GitHub, Pull Request, Code Review, CI와 Unity 협업 규칙을 망라한 TeamHJD의 전체 가이드
+tags: [필수, git, github, unity, onboarding, code-review, ci]
+---
+
 # Unity 팀 개발 협업 가이드
-### Git · GitHub · Pull Request · Code Review · CI
+
+Git · GitHub · Pull Request · Code Review · CI
+
+> **중요도: 필수** · 협업을 처음 시작하거나, 작업 흐름 중 막힌 단계가 있을 때 찾아보는 전체 레퍼런스입니다.
+
+이 문서는 TeamHJD 협업의 모든 기초 개념과 온보딩 실습을 담고 있습니다. 처음부터 순서대로 읽어도 좋고, 왼쪽 목차에서 지금 필요한 주제로 바로 이동해도 좋습니다.
 
 > **대상**: Git/GitHub 협업이 아직 익숙하지 않은 팀원  
 > **목표**: 명령어를 외우는 것보다, **왜 이런 흐름으로 협업하는지 이해하는 것**  
@@ -41,9 +54,9 @@ Done
 
 ---
 
-# 1. Git과 GitHub
+## 1. Git과 GitHub
 
-## Git
+### Git
 
 **Git**은 파일의 변경 이력을 기록하고 여러 사람이 같은 프로젝트를 안전하게 개발할 수 있도록 도와주는 **분산 버전 관리 시스템(DVCS)**이다.
 
@@ -60,7 +73,7 @@ Git은 내 컴퓨터에서도 동작한다.
 
 ---
 
-## GitHub
+### GitHub
 
 **GitHub**는 Git Repository를 온라인에서 관리하면서 협업 기능을 제공하는 플랫폼이다.
 
@@ -90,7 +103,7 @@ GitHub  = Git을 기반으로 협업하기 위한 플랫폼
 
 ---
 
-# 2. Git이 파일을 관리하는 흐름
+## 2. Git이 파일을 관리하는 흐름
 
 Git을 처음 배울 때 가장 중요한 부분이다.
 
@@ -104,7 +117,7 @@ Local Repository
 Remote Repository
 ```
 
-## Working Directory
+### Working Directory
 
 현재 내가 직접 수정하고 있는 프로젝트 파일이다.
 
@@ -112,7 +125,7 @@ Remote Repository
 
 ---
 
-## Staging Area
+### Staging Area
 
 다음 Commit에 포함할 변경 사항을 고르는 공간이다.
 
@@ -124,7 +137,7 @@ git add PlayerController.cs
 
 ---
 
-## Commit
+### Commit
 
 선택한 변경 사항을 하나의 **의미 있는 이력 단위**로 저장한다.
 
@@ -142,7 +155,7 @@ Commit은 단순 저장 버튼이 아니다.
 
 ---
 
-## Local Repository
+### Local Repository
 
 내 컴퓨터에 존재하는 Git Repository다.
 
@@ -150,7 +163,7 @@ Commit을 했다고 바로 GitHub에 올라가는 것은 아니다.
 
 ---
 
-## Remote Repository
+### Remote Repository
 
 GitHub 등에 존재하는 공유 Repository다.
 
@@ -158,9 +171,9 @@ GitHub 등에 존재하는 공유 Repository다.
 
 ---
 
-# 3. Repository / Clone / Remote
+## 3. Repository / Clone / Remote
 
-## Repository
+### Repository
 
 Git이 변경 이력을 추적하는 프로젝트 저장소.
 
@@ -168,7 +181,7 @@ Git이 변경 이력을 추적하는 프로젝트 저장소.
 
 ---
 
-## Clone
+### Clone
 
 Remote Repository를 처음 내 컴퓨터로 복제하는 작업.
 
@@ -180,7 +193,7 @@ Clone을 하면 코드뿐 아니라 Git History도 함께 가져온다.
 
 ---
 
-## Remote
+### Remote
 
 Local Repository와 연결된 외부 Repository.
 
@@ -194,11 +207,11 @@ origin
 
 ---
 
-# 4. Push / Fetch / Pull
+## 4. Push / Fetch / Pull
 
 초반에 가장 많이 헷갈리는 세 가지다.
 
-## Push
+### Push
 
 내 Local Commit을 Remote Repository로 올린다.
 
@@ -212,7 +225,7 @@ git push
 
 ---
 
-## Fetch
+### Fetch
 
 Remote Repository에 어떤 변화가 생겼는지 **정보를 가져온다.**
 
@@ -224,7 +237,7 @@ git fetch
 
 ---
 
-## Pull
+### Pull
 
 Remote의 변경 사항을 가져와 현재 Branch에 반영한다.
 
@@ -246,9 +259,9 @@ git pull
 
 ---
 
-# 5. Commit
+## 5. Commit
 
-## 좋은 Commit이란?
+### 좋은 Commit이란?
 
 Commit 하나에는 가능한 한 **하나의 목적**이 들어가는 것이 좋다.
 
@@ -274,7 +287,7 @@ Commit Message만 봐도 어느 정도 변경 내용을 추측할 수 있어야 
 
 ---
 
-## Commit Hash
+### Commit Hash
 
 각 Commit에는 고유한 식별값이 존재한다.
 
@@ -288,7 +301,7 @@ Git은 이 값을 이용해 특정 Commit을 정확히 가리킬 수 있다.
 
 ---
 
-## History
+### History
 
 Commit이 쌓여 만들어진 프로젝트의 변경 이력이다.
 
@@ -298,7 +311,7 @@ git log
 
 ---
 
-## Diff
+### Diff
 
 두 상태 사이에서 **무엇이 변경되었는지** 보여주는 차이다.
 
@@ -314,7 +327,7 @@ PR Code Review에서도 결국 Reviewer가 가장 많이 보는 것은 이 Diff�
 
 ---
 
-# 6. Branch
+## 6. Branch
 
 Branch는 다른 작업과 분리하여 개발할 수 있게 해주는 독립적인 작업 흐름이다.
 
@@ -328,7 +341,7 @@ main
  └──── fix/enemy-target
 ```
 
-## 왜 Branch를 사용할까?
+### 왜 Branch를 사용할까?
 
 여러 명이 동시에 `main`을 직접 수정하면 서로의 코드가 계속 섞인다.
 
@@ -358,7 +371,7 @@ refactor/damage-system
 
 ---
 
-# 7. HEAD
+## 7. HEAD
 
 **HEAD**는 현재 내가 바라보고 있는 Commit을 가리키는 포인터라고 생각하면 된다.
 
@@ -384,7 +397,7 @@ Git에서
 
 ---
 
-# 8. Merge
+## 8. Merge
 
 Merge는 서로 다른 Branch의 변경 사항을 하나로 합치는 작업이다.
 
@@ -409,7 +422,7 @@ Pull Request
 
 ---
 
-# 9. Merge Conflict
+## 9. Merge Conflict
 
 Git이 두 변경 사항 중 어떤 것을 선택해야 할지 판단할 수 없을 때 발생한다.
 
@@ -449,7 +462,7 @@ speed = 15;
 
 에 가깝다.
 
-## Conflict Resolution
+### Conflict Resolution
 
 일반적인 흐름은:
 
@@ -471,11 +484,11 @@ Merge 계속 진행
 
 ---
 
-# 10. 변경을 되돌리는 방법
+## 10. 변경을 되돌리는 방법
 
 비슷해 보이지만 역할이 다르다.
 
-## restore
+### restore
 
 현재 작업 파일의 변경 내용을 되돌릴 때 사용한다.
 
@@ -483,7 +496,7 @@ Merge 계속 진행
 
 ---
 
-## revert
+### revert
 
 기존 Commit을 삭제하는 대신, **그 Commit의 변경을 반대로 수행하는 새로운 Commit**을 만든다.
 
@@ -498,7 +511,7 @@ Commit C를 취소하는 Commit D
 
 ---
 
-## reset
+### reset
 
 Branch가 가리키는 위치 자체를 이전 Commit으로 이동시킬 수 있다.
 
@@ -518,7 +531,7 @@ git reset --hard
 
 ---
 
-# 11. Stash
+## 11. Stash
 
 아직 Commit하기 애매한 작업을 잠시 치워두고 싶을 때 사용한다.
 
@@ -548,9 +561,11 @@ git stash pop
 
 ---
 
-# 12. GitHub Issue
+## 12. GitHub Issue
 
 Issue는 개발해야 할 작업, Bug, 개선 사항 등을 추적하는 기본 단위다.
+
+[#1 : GitHub Issue 작성 화면 캡처 이미지]
 
 예:
 
@@ -559,13 +574,13 @@ Issue는 개발해야 할 작업, Bug, 개선 사항 등을 추적하는 기본 
 [Bug] Turret이 제거된 Enemy를 계속 Targeting하는 문제
 ```
 
-## 자주 쓰는 기능
+### 자주 쓰는 기능
 
-### Assignee
+#### Assignee
 
 해당 Issue의 담당자.
 
-### Label
+#### Label
 
 Issue의 종류나 성격을 표시한다.
 
@@ -582,7 +597,7 @@ priority: medium
 priority: low
 ```
 
-### Milestone
+#### Milestone
 
 여러 Issue를 특정 목표에 묶을 때 사용한다.
 
@@ -596,7 +611,7 @@ Demo Release
 
 ---
 
-## Acceptance Criteria
+### Acceptance Criteria
 
 **이 Issue를 완료했다고 판단할 조건**이다.
 
@@ -623,33 +638,33 @@ Acceptance Criteria가 있으면
 
 ---
 
-# 13. Task Management에서 자주 쓰는 용어
+## 13. Task Management에서 자주 쓰는 용어
 
-## Backlog
+### Backlog
 
 해야 할 가능성이 있지만 아직 이번 작업 주기에 들어오지 않은 Task 목록.
 
 ---
 
-## Todo
+### Todo
 
 가까운 시기에 실제로 진행하기로 결정한 Task.
 
 ---
 
-## In Progress
+### In Progress
 
 현재 누군가 작업하고 있는 상태.
 
 ---
 
-## Review
+### Review
 
 PR이 생성되어 Review를 기다리고 있거나 Review 중인 상태.
 
 ---
 
-## Done
+### Done
 
 단순히 코딩이 끝난 상태가 아니다.
 
@@ -677,13 +692,13 @@ Done
 
 ---
 
-## Priority
+### Priority
 
 작업 우선순위.
 
 ---
 
-## Dependency
+### Dependency
 
 다른 Task나 System이 먼저 필요하거나 서로 의존하는 관계.
 
@@ -695,7 +710,7 @@ Damage System 필요
 
 ---
 
-## Blocker
+### Blocker
 
 작업 진행을 막고 있는 문제.
 
@@ -703,7 +718,7 @@ Blocker가 생겼다면 혼자 오래 끌기보다 빠르게 공유한다.
 
 ---
 
-## Scope
+### Scope
 
 현재 작업에서 **포함하는 범위**.
 
@@ -717,7 +732,7 @@ PR이나 Issue가 커질 때 특히 중요한 개념이다.
 
 ---
 
-# 14. GitHub Projects
+## 14. GitHub Projects
 
 GitHub Issue를 Board 형태로 관리할 수 있는 기능이다.
 
@@ -748,9 +763,11 @@ Projects에서는 다음 정보를 함께 관리할 수 있다.
 
 ---
 
-# 15. Pull Request
+## 15. Pull Request
 
 Pull Request, 줄여서 **PR**은 이번 프로젝트에서 가장 중요한 협업 기능 중 하나다.
+
+[#2 : GitHub Pull Request 변경 사항 및 리뷰 화면 캡처 이미지]
 
 단순히:
 
@@ -769,7 +786,7 @@ Shared Branch에 들어가기 전에 함께 확인하고 이야기해 주세요.
 
 에 가깝다.
 
-## PR에서 주로 확인하는 것
+### PR에서 주로 확인하는 것
 
 - Title
 - Description
@@ -783,7 +800,7 @@ Shared Branch에 들어가기 전에 함께 확인하고 이야기해 주세요.
 
 ---
 
-## Draft PR
+### Draft PR
 
 아직 Merge할 준비는 되지 않았지만 작업 방향이나 진행 상황을 공유하고 싶을 때 사용할 수 있다.
 
@@ -798,7 +815,7 @@ Shared Branch에 들어가기 전에 함께 확인하고 이야기해 주세요.
 
 ---
 
-# 16. Issue와 PR 연결
+## 16. Issue와 PR 연결
 
 PR 본문에서 다음처럼 작성할 수 있다.
 
@@ -841,7 +858,7 @@ Issue Close
 
 ---
 
-# 17. Code Review
+## 17. Code Review
 
 Code Review의 목적은 단순히 **틀린 코드 찾기**가 아니다.
 
@@ -860,59 +877,59 @@ Code Review의 목적은 단순히 **틀린 코드 찾기**가 아니다.
 
 ---
 
-## Reviewer가 볼 수 있는 것
+### Reviewer가 볼 수 있는 것
 
-### Correctness
+#### Correctness
 
 의도대로 동작하는가?
 
-### Readability
+#### Readability
 
 다른 사람이 읽고 이해하기 쉬운가?
 
-### Naming
+#### Naming
 
 Class, Method, Variable 이름이 역할을 잘 표현하는가?
 
-### Responsibility
+#### Responsibility
 
 한 Class나 Method가 너무 많은 역할을 맡고 있지 않은가?
 
-### Coupling
+#### Coupling
 
 다른 System과 지나치게 강하게 연결되어 있지 않은가?
 
-### Duplication
+#### Duplication
 
 같은 로직이 불필요하게 반복되고 있지 않은가?
 
-### Edge Case
+#### Edge Case
 
 평소에는 드러나지 않는 경계 상황에서 문제가 발생하지 않는가?
 
-### Regression
+#### Regression
 
 새 변경으로 기존 기능이 망가지지 않는가?
 
-### Unity Asset Change
+#### Unity Asset Change
 
 의도하지 않은 Scene, Prefab, `.meta` 변경이 섞여 있지 않은가?
 
 ---
 
-## Review 결과
+### Review 결과
 
 GitHub Review에서는 보통 다음 중 하나를 선택할 수 있다.
 
-### Comment
+#### Comment
 
 의견만 남긴다.
 
-### Approve
+#### Approve
 
 현재 변경 사항을 Merge해도 괜찮다고 판단한다.
 
-### Request Changes
+#### Request Changes
 
 Merge 전에 수정이 필요하다고 판단한다.
 
@@ -922,7 +939,7 @@ Merge 전에 수정이 필요하다고 판단한다.
 
 ---
 
-## Review Comment 표현
+### Review Comment 표현
 
 팀에서 다음 정도를 구분해서 사용하면 편하다.
 
@@ -942,7 +959,7 @@ Naming, Formatting 등 아주 작은 의견
 
 ---
 
-## LGTM
+### LGTM
 
 **Looks Good To Me**
 
@@ -959,17 +976,17 @@ Approve
 
 ---
 
-# 18. Merge Strategy
+## 18. Merge Strategy
 
 GitHub에서는 PR을 합치는 방법이 여러 가지다.
 
-## Merge Commit
+### Merge Commit
 
 Branch의 Commit History를 유지하면서 Merge Commit을 하나 추가한다.
 
 ---
 
-## Squash and Merge
+### Squash and Merge
 
 PR 안의 여러 Commit을 하나로 합쳐 main에 반영한다.
 
@@ -993,7 +1010,7 @@ feat: implement player dash (#32)
 
 ---
 
-## Rebase and Merge
+### Rebase and Merge
 
 Commit의 기반을 재배치하여 History를 선형으로 유지한다.
 
@@ -1001,7 +1018,7 @@ Commit의 기반을 재배치하여 History를 선형으로 유지한다.
 
 ---
 
-# 19. main과 Stable Branch
+## 19. main과 Stable Branch
 
 `main`은 가능한 한 항상 다음 상태를 유지하는 것을 목표로 한다.
 
@@ -1037,7 +1054,7 @@ Merge
 
 ---
 
-# 20. Ruleset / Branch Protection
+## 20. Ruleset / Branch Protection
 
 협업 규칙을 사람의 기억에만 맡기지 않고 GitHub가 강제하도록 만들 수 있다.
 
@@ -1060,9 +1077,11 @@ Status Check 통과 필요
 
 ---
 
-# 21. GitHub Actions
+## 21. GitHub Actions
 
 GitHub Actions는 GitHub Repository에서 발생하는 Event를 기준으로 **자동화 작업을 실행할 수 있는 기능**이다.
+
+[#3 : GitHub Actions 워크플로 실행 결과 화면 캡처 이미지]
 
 대표적으로:
 
@@ -1093,7 +1112,7 @@ Success / Fail
 
 ---
 
-## GitHub Actions의 핵심 구조
+### GitHub Actions의 핵심 구조
 
 ```text
 Event / Trigger
@@ -1135,7 +1154,7 @@ Pull Request 생성
 
 ---
 
-## Workflow
+### Workflow
 
 자동화 전체 Process.
 
@@ -1153,7 +1172,7 @@ Pull Request 생성
 
 ---
 
-## Event / Trigger
+### Event / Trigger
 
 Workflow를 실행하게 만드는 조건.
 
@@ -1165,13 +1184,13 @@ pull_request
 workflow_dispatch
 ```
 
-### workflow_dispatch
+#### workflow_dispatch
 
 GitHub 화면에서 사용자가 직접 Workflow를 실행할 수 있도록 하는 Trigger.
 
 ---
 
-## Job
+### Job
 
 Workflow 안에서 수행되는 큰 작업 단위.
 
@@ -1187,7 +1206,7 @@ Job은 서로 병렬로 실행되거나 순서를 가질 수도 있다.
 
 ---
 
-## Step
+### Step
 
 Job 안에서 실제로 실행되는 세부 단계.
 
@@ -1205,7 +1224,7 @@ Build 실행
 
 ---
 
-## Runner
+### Runner
 
 Workflow를 실제로 실행하는 컴퓨터 환경이다.
 
@@ -1221,7 +1240,7 @@ macOS
 
 ---
 
-## Action
+### Action
 
 반복적으로 사용되는 자동화 동작을 재사용할 수 있게 만든 Component.
 
@@ -1235,7 +1254,7 @@ Runner가 Repository Code를 가져오게 해주는 Action이다.
 
 ---
 
-# 22. GitHub Actions와 CI의 차이
+## 22. GitHub Actions와 CI의 차이
 
 둘은 같은 말이 아니다.
 
@@ -1257,9 +1276,9 @@ GitHub Actions를 이용해 CI를 구축한다.
 
 ---
 
-# 23. CI / Status Check
+## 23. CI / Status Check
 
-## CI — Continuous Integration
+### CI — Continuous Integration
 
 여러 개발자의 변경 사항을 자주 통합하면서 Build나 Test 등을 자동으로 검증하는 방식.
 
@@ -1274,7 +1293,7 @@ Test ✅
 
 ---
 
-## Status Check
+### Status Check
 
 GitHub에서 자동화 결과를 PR에 표시하는 상태 정보.
 
@@ -1301,9 +1320,9 @@ Merge 차단
 
 ---
 
-# 24. Artifact / Secret / Cache
+## 24. Artifact / Secret / Cache
 
-## Artifact
+### Artifact
 
 Workflow 실행 중 생성된 결과물을 저장할 수 있다.
 
@@ -1320,7 +1339,7 @@ Game.zip
 
 ---
 
-## Secret
+### Secret
 
 Token, API Key, Webhook URL처럼 공개되면 안 되는 값을 안전하게 저장하는 기능.
 
@@ -1336,7 +1355,7 @@ API_KEY
 
 ---
 
-## Cache
+### Cache
 
 Dependency나 Build 중간 결과처럼 반복해서 사용하는 데이터를 재사용하여 Workflow 실행 시간을 줄이는 방법.
 
@@ -1350,9 +1369,9 @@ Dependency나 Build 중간 결과처럼 반복해서 사용하는 데이터를 �
 
 ---
 
-# 25. GitHub Template
+## 25. GitHub Template
 
-## Issue Template
+### Issue Template
 
 Issue를 만들 때 일정한 형식을 제공한다.
 
@@ -1375,7 +1394,7 @@ Screenshot / Video
 
 ---
 
-## Pull Request Template
+### Pull Request Template
 
 PR 생성 시 작성할 내용을 자동으로 제공한다.
 
@@ -1393,9 +1412,9 @@ Template을 사용하면 중요한 내용을 빼먹을 가능성이 줄어든다
 
 ---
 
-# 26. Tag / Release / Version
+## 26. Tag / Release / Version
 
-## Tag
+### Tag
 
 특정 Commit에 이름을 붙이는 기능.
 
@@ -1407,7 +1426,7 @@ v1.0.0
 
 ---
 
-## Release
+### Release
 
 Tag를 기준으로 GitHub에서 배포 Version을 관리할 수 있다.
 
@@ -1415,7 +1434,7 @@ Tag를 기준으로 GitHub에서 배포 Version을 관리할 수 있다.
 
 ---
 
-## Semantic Versioning
+### Semantic Versioning
 
 보통 다음 형태를 사용한다.
 
@@ -1442,15 +1461,17 @@ Bug Fix
 
 ---
 
-# 27. Unity 프로젝트에서 Git을 사용할 때
+## 27. Unity 프로젝트에서 Git을 사용할 때
 
 Unity 프로젝트는 C# 코드만 관리하는 프로젝트가 아니다.
 
 Scene, Prefab, Texture, Model 등 다양한 Asset이 존재하기 때문에 몇 가지 주의할 점이 있다.
 
+[#4 : Unity Editor Version Control 설정 화면 캡처 이미지]
+
 ---
 
-## `.meta`
+### `.meta`
 
 Unity는 Asset마다 `.meta` 파일을 생성한다.
 
@@ -1469,7 +1490,7 @@ Asset만 Git에 올리고 `.meta`를 빼먹으면 다른 팀원의 Project에서
 
 ---
 
-## Visible Meta Files
+### Visible Meta Files
 
 외부 Version Control System에서 `.meta` 파일을 함께 관리하기 위해 사용하는 설정이다.
 
@@ -1477,7 +1498,7 @@ Unity 버전에 따라 메뉴 위치가 조금 다를 수 있지만 Project Sett
 
 ---
 
-## Force Text
+### Force Text
 
 Unity의 Serialized Asset을 가능한 Text 형식으로 저장한다.
 
@@ -1485,7 +1506,7 @@ Scene / Prefab 변경 사항을 Git Diff에서 확인하거나 Merge하기 쉽�
 
 ---
 
-## YAML
+### YAML
 
 Unity의 Scene, Prefab 등의 Text Serialization에서 볼 수 있는 형식.
 
@@ -1499,7 +1520,7 @@ Unity의 Scene, Prefab 등의 Text Serialization에서 볼 수 있는 형식.
 
 ---
 
-## Git LFS
+### Git LFS
 
 **Git Large File Storage**
 
@@ -1521,7 +1542,7 @@ Unity의 Scene, Prefab 등의 Text Serialization에서 볼 수 있는 형식.
 
 ---
 
-## UnityYAMLMerge
+### UnityYAMLMerge
 
 Unity가 제공하는 Smart Merge Tool.
 
@@ -1531,9 +1552,9 @@ Scene / Prefab처럼 Unity YAML 형식으로 저장된 파일의 Merge를 보조
 
 ---
 
-# 28. Git에서 알아두면 좋은 추가 기능
+## 28. Git에서 알아두면 좋은 추가 기능
 
-## Blame
+### Blame
 
 특정 코드 줄이 **언제, 어떤 Commit에서 변경되었는지** 확인한다.
 
@@ -1553,7 +1574,7 @@ Scene / Prefab처럼 Unity YAML 형식으로 저장된 파일의 Merge를 보조
 
 ---
 
-## Cherry-pick
+### Cherry-pick
 
 특정 Commit 하나만 골라 다른 Branch에 적용한다.
 
@@ -1572,7 +1593,7 @@ Commit C만 Branch B에 적용
 
 ---
 
-## Fork
+### Fork
 
 다른 Repository를 내 GitHub 계정 쪽에 독립적인 Repository로 만들어 작업하는 방식.
 
@@ -1588,21 +1609,21 @@ Fork
 
 ---
 
-# 29. Software Engineering에서 자주 쓰는 용어
+## 29. Software Engineering에서 자주 쓰는 용어
 
-## Architecture
+### Architecture
 
 System 전체의 구조와 Component 간 관계.
 
 ---
 
-## Dependency
+### Dependency
 
 한 Module, Class, System이 다른 요소를 필요로 하는 관계.
 
 ---
 
-## Coupling
+### Coupling
 
 두 Component가 얼마나 강하게 연결되어 있는지를 나타내는 개념.
 
@@ -1610,25 +1631,25 @@ System 전체의 구조와 Component 간 관계.
 
 ---
 
-## Cohesion
+### Cohesion
 
 하나의 Module이나 Class 안의 기능들이 얼마나 서로 관련된 Responsibility를 가지고 있는지 나타내는 개념.
 
 ---
 
-## Responsibility
+### Responsibility
 
 Class, Module, System이 담당해야 하는 역할.
 
 ---
 
-## Refactoring
+### Refactoring
 
 외부 동작을 바꾸지 않으면서 내부 Code Structure를 개선하는 작업.
 
 ---
 
-## Technical Debt
+### Technical Debt
 
 빠른 개발이나 임시 설계 등으로 인해 나중에 추가적인 수정 비용이 발생하는 상태.
 
@@ -1636,7 +1657,7 @@ Class, Module, System이 담당해야 하는 역할.
 
 ---
 
-## Regression
+### Regression
 
 새로운 변경으로 인해 기존에 잘 동작하던 기능이 망가지는 현상.
 
@@ -1650,13 +1671,13 @@ Dash 기능 추가
 
 ---
 
-## Edge Case
+### Edge Case
 
 일반적인 상황에서는 잘 발생하지 않지만 특정 조건에서 발생하는 경계 상황.
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 문제가 발생했을 때 원인을 추적하고 해결하는 과정 전체.
 
@@ -1684,7 +1705,7 @@ Dash 기능 추가
 
 ---
 
-## Bottleneck
+### Bottleneck
 
 전체 System의 성능이나 진행 속도를 제한하는 가장 큰 지점.
 
@@ -1700,7 +1721,7 @@ Development Bottleneck
 
 ---
 
-## Tick
+### Tick
 
 Game Engine에서 Frame 또는 일정 Update 주기마다 반복적으로 실행되는 처리 단위를 흔히 Tick이라고 부른다.
 
@@ -1716,19 +1737,19 @@ LateUpdate
 
 ---
 
-## Hotfix
+### Hotfix
 
 서비스나 주요 Build에 발생한 심각한 문제를 빠르게 수정하는 변경.
 
 ---
 
-## Workaround
+### Workaround
 
 근본적인 원인을 해결한 것은 아니지만 문제를 우회하여 동작하게 만드는 방법.
 
 ---
 
-## Legacy Code
+### Legacy Code
 
 기존부터 존재하던 코드 중 현재 구조와 잘 맞지 않거나 변경하기 어려운 Code/System을 흔히 이렇게 부른다.
 
@@ -1736,17 +1757,17 @@ LateUpdate
 
 ---
 
-## Breaking Change
+### Breaking Change
 
 기존 Interface나 사용 방식과 호환되지 않는 변경.
 
 ---
 
-# 30. PoC / Prototype / MVP
+## 30. PoC / Prototype / MVP
 
 서로 비슷해 보여 헷갈리기 쉽다.
 
-## PoC — Proof of Concept
+### PoC — Proof of Concept
 
 **이 기술이나 아이디어가 실제로 가능한가?**
 
@@ -1765,7 +1786,7 @@ Unity Netcode를 이용해서
 
 ---
 
-## Prototype
+### Prototype
 
 **게임 방식이 실제로 동작하고 재미있는가?**
 
@@ -1775,7 +1796,7 @@ Unity Netcode를 이용해서
 
 ---
 
-## MVP — Minimum Viable Product
+### MVP — Minimum Viable Product
 
 사용자에게 제공할 수 있는 **최소한의 제품 형태**.
 
@@ -1794,7 +1815,7 @@ MVP
 
 ---
 
-# 31. 자주 보는 약어와 표현
+## 31. 자주 보는 약어와 표현
 
 | 표현 | 의미 |
 |---|---|
@@ -1822,13 +1843,13 @@ MVP
 
 ---
 
-# 32. 이번 주 온보딩 실습
+## 32. 이번 주 온보딩 실습
 
 읽는 것만으로는 Git 협업에 익숙해지기 어렵다.
 
 가능하면 테스트용 Repository에서 아래 과정을 전원이 한 번씩 직접 해본다.
 
-## Step 1 — Repository 사용
+### Step 1 — Repository 사용
 
 - [ ] Repository Clone
 - [ ] `git status` 확인
@@ -1840,7 +1861,7 @@ MVP
 
 ---
 
-## Step 2 — Branch
+### Step 2 — Branch
 
 - [ ] `main` 최신 상태 확인
 - [ ] Feature Branch 생성
@@ -1856,7 +1877,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 3 — Issue
+### Step 3 — Issue
 
 - [ ] 테스트 Issue 생성
 - [ ] Assignee 지정
@@ -1865,7 +1886,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 4 — Pull Request
+### Step 4 — Pull Request
 
 - [ ] Issue 기반 Branch에서 작업
 - [ ] PR 생성
@@ -1876,7 +1897,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 5 — Code Review
+### Step 5 — Code Review
 
 본인이 작성하지 않은 PR을 하나 Review한다.
 
@@ -1887,7 +1908,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 6 — Review 반영
+### Step 6 — Review 반영
 
 - [ ] Review Comment 확인
 - [ ] 필요한 코드 수정
@@ -1897,7 +1918,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 7 — Merge
+### Step 7 — Merge
 
 - [ ] Review 완료 확인
 - [ ] CI / Check 확인
@@ -1908,7 +1929,7 @@ feat/git-practice-이름
 
 ---
 
-## Step 8 — Merge Conflict를 일부러 만들어보기
+### Step 8 — Merge Conflict를 일부러 만들어보기
 
 팀원 두 명이 같은 파일의 같은 줄을 서로 다르게 수정한다.
 
@@ -1933,7 +1954,7 @@ speed = 10;
 
 ---
 
-## Step 9 — GitHub Actions 확인
+### Step 9 — GitHub Actions 확인
 
 우리 Repository에 존재하는 Workflow를 직접 열어본다.
 
@@ -1960,7 +1981,7 @@ Workflow YAML을 처음부터 직접 작성할 필요는 없다.
 
 ---
 
-# 33. 우리 팀에서 기억할 것
+## 33. 우리 팀에서 기억할 것
 
 Git 명령어를 많이 아는 것보다 다음 흐름을 자연스럽게 사용할 수 있는 것이 더 중요하다.
 
@@ -2004,7 +2025,7 @@ Issue를 닫는다.
 
 ---
 
-# 마지막으로
+## 마지막으로
 
 이번 프로젝트에서 GitHub를 사용하는 목적은 단순히:
 
@@ -2022,7 +2043,7 @@ Issue를 닫는다.
 
 ---
 
-### Quick Cheat Sheet
+#### Quick Cheat Sheet
 
 ```text
 Git
