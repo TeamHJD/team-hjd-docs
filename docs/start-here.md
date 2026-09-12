@@ -17,7 +17,7 @@ description: TeamHJD 문서를 목적에 맞게 읽는 가장 빠른 길
 3. [GitHub 작업 흐름](./collaboration/github-flow) — 실제 팀 작업 단위를 이해합니다.
 4. [Pull Request와 리뷰](./delivery/pull-request) — 변경을 팀에 반영하는 기준을 확인합니다.
 
-더 자세한 설명·명령어·온보딩 실습이 필요하면 [전체 Unity 협업 가이드](./collaboration/unity-team-collaboration-guide)를 참고합니다.
+상세 설명이 필요하면 [Git과 기본 작업 흐름](./collaboration/git-basics)부터 주제별 문서를 따라갑니다. 실제로 한 사이클을 연습하려면 [온보딩 실습](./team/onboarding)을 사용합니다.
 
 ## 중요도 표기
 

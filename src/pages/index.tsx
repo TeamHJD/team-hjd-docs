@@ -1,4 +1,5 @@
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import styles from './index.module.css';
@@ -10,15 +11,24 @@ const paths = [
 ];
 
 export default function Home(): JSX.Element {
+  const logoForLightMode = useBaseUrl('img/brand/teamhjd-dark.png');
+  const logoForDarkMode = useBaseUrl('img/brand/teamhjd-light.png');
+
   return <Layout title="팀의 지식이 흐르는 곳" description="TeamHJD 기술 및 협업 문서">
     <main>
       <section className={styles.hero}>
-        <p className={styles.eyebrow}>TEAMHJD KNOWLEDGE BASE</p>
-        <h1>필요한 순간에,<br />다음 행동이 보이는 문서</h1>
-        <p className={styles.lead}>개념을 모아두는 곳을 넘어, 팀원이 같은 흐름으로 일하도록 돕는 TeamHJD의 기술·협업 가이드입니다.</p>
-        <div className={styles.actions}>
-          <Link className="button button--primary button--lg" to="/docs/start-here">처음부터 따라가기</Link>
-          <Link className="button button--secondary button--lg" to="/docs/collaboration/overview">협업 흐름 보기</Link>
+        <div className={styles.heroCopy}>
+          <p className={styles.eyebrow}>TEAMHJD KNOWLEDGE BASE</p>
+          <h1>필요한 순간에,<br />다음 행동이 보이는 문서</h1>
+          <p className={styles.lead}>개념을 모아두는 곳을 넘어, 팀원이 같은 흐름으로 일하도록 돕는 TeamHJD의 기술·협업 가이드입니다.</p>
+          <div className={styles.actions}>
+            <Link className="button button--primary button--lg" to="/docs/start-here">처음부터 따라가기</Link>
+            <Link className="button button--secondary button--lg" to="/docs/collaboration/overview">협업 흐름 보기</Link>
+          </div>
+        </div>
+        <div className={styles.brandLockup} aria-hidden="true">
+          <img className={styles.logoOnLight} src={logoForLightMode} alt="" />
+          <img className={styles.logoOnDark} src={logoForDarkMode} alt="" />
         </div>
       </section>
       <section className={styles.section}>

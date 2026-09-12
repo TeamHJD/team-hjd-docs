@@ -31,13 +31,18 @@ const config: Config = {
     ],
   ],
   themeConfig: {
+    colorMode: {
+      defaultMode: 'light',
+      respectPrefersColorScheme: true,
+    },
     image: 'img/teamhjd-social-card.png',
     navbar: {
       title: 'TeamHJD Docs',
       items: [
         {to: '/docs/start-here', label: '시작하기', position: 'left'},
         {to: '/docs/collaboration/overview', label: '협업 가이드', position: 'left'},
-        {to: '/docs/reference/priority-guide', label: '레퍼런스', position: 'left'},
+        {to: '/docs/reference/glossary', label: '용어 사전', position: 'left'},
+        {to: '/docs/reference/abbreviations', label: '약어', position: 'left'},
         {href: 'https://github.com/TeamHJD/team-hjd-docs', label: 'GitHub', position: 'right'},
       ],
     },
@@ -54,7 +59,10 @@ const config: Config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} TeamHJD. Built with Docusaurus.`,
     },
-    prism: {theme: {plain: {color: '#1f2937', backgroundColor: '#f8fafc'}, styles: []}},
+    prism: {
+      theme: {plain: {color: '#1f2937', backgroundColor: '#f8fafc'}, styles: []},
+      darkTheme: {plain: {color: '#d9f2ee', backgroundColor: '#102832'}, styles: []},
+    },
   } satisfies Preset.ThemeConfig,
 };
 
