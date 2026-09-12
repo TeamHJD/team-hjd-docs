@@ -17,6 +17,10 @@ export default function Home(): JSX.Element {
   return <Layout title="팀의 지식이 흐르는 곳" description="TeamHJD 기술 및 협업 문서">
     <main>
       <section className={styles.hero}>
+        <div className={styles.brandLockup} aria-hidden="true">
+          <img className={styles.logoOnLight} src={logoForLightMode} alt="" />
+          <img className={styles.logoOnDark} src={logoForDarkMode} alt="" />
+        </div>
         <div className={styles.heroCopy}>
           <p className={styles.eyebrow}>TEAMHJD KNOWLEDGE BASE</p>
           <h1>필요한 순간에,<br />다음 행동이 보이는 문서</h1>
@@ -25,10 +29,6 @@ export default function Home(): JSX.Element {
             <Link className="button button--primary button--lg" to="/docs/start-here">처음부터 따라가기</Link>
             <Link className="button button--secondary button--lg" to="/docs/collaboration/overview">협업 흐름 보기</Link>
           </div>
-        </div>
-        <div className={styles.brandLockup} aria-hidden="true">
-          <img className={styles.logoOnLight} src={logoForLightMode} alt="" />
-          <img className={styles.logoOnDark} src={logoForDarkMode} alt="" />
         </div>
       </section>
       <section className={styles.section}>
