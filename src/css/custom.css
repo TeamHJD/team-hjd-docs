@@ -1,0 +1,3 @@
+:root { --ifm-color-primary: #0f766e; --ifm-color-primary-dark: #0d675f; --ifm-color-primary-darker: #0c6159; --ifm-color-primary-light: #11857d; --ifm-background-color: #fbfdfd; --ifm-font-family-base: Inter, Pretendard, system-ui, -apple-system, sans-serif; --ifm-heading-font-family: Inter, Pretendard, system-ui, sans-serif; --ifm-code-font-size: 92%; }
+[data-theme='dark'] { --ifm-color-primary: #5eead4; --ifm-background-color: #102a43; --ifm-background-surface-color: #173b5b; }
+.theme-doc-markdown > h1 { letter-spacing: -.04em; }.theme-doc-markdown > h2 { margin-top: 2.5rem; letter-spacing: -.025em; }
